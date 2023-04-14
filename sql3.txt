@@ -1,0 +1,35 @@
+1) create table employee of 7 records
+create table emp4(
+eid integer,ename varchar(10),age integer,salary integer);
+exec sp_help emp4;
+insert into  emp4(eid,ename,age,salary)values(101,'anu',22,9000);
+insert into emp4(eid,ename,age,salary)values(102,'shane',29,8000);
+insert into emp4(eid,ename,age,salary)values(103,'rohan',34,6000);
+insert into emp4(eid,ename,age,salary)values(104,'scott',44,10000);
+insert into emp4(eid,ename,age,salary)values(105,'tiger',35,8000);
+insert into emp4(eid,ename,age,salary)values(106,'alex',27,7000);
+insert into emp4(eid,ename,age,salary)values(107,'abhi',29,8000);
+select *from emp4;
+select count(ename)from emp4;
+select max(age) from emp4;
+select min(age) from emp4;
+select min(salary) from emp4;
+select max(salary) from emp4;
+select sum(age)from emp4;
+select sum(salary) from emp4;
+select avg(salary) from emp4;
+select avg(age)from emp4;
+select salary from emp4 group by salary;
+select ename,salary from emp4 order by salary;
+select ename,salary from emp4 order by salary desc;
+select ename,salary from emp4 where age<29 group by ename,salary having salary<10000;
+select count(distinct eid)from emp4;
+find ename from employee table whose ename starts from abhi?
+select ename from emp4 where  ename like '%abhi%' ;
+find ename from employee table whose ename alphabet 'a' has present in ename ?
+select ename from emp4 where  ename like '%a%' ;
+find ename from employee table whos ename starts from alphabet 'a'?
+select ename from emp4 where  ename like 'a%' ;
+update salary from employee table ,find avg salary?
+update emp4 set salary=salary*1.05 where salary<(select avg(salary) from emp4);
+select *from emp4;
