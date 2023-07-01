@@ -1,3 +1,5 @@
+https://www.academia.edu/40239143/ENGINERRING_MATHEMATICS_AND_GENERAL_APTITUDE
+
 # 
 week2
 2nd 
